@@ -5,21 +5,21 @@
 class Worklog < Formula
   desc "Instant terminal logger for tasks and thoughts with Obsidian compatibility"
   homepage "https://github.com/Dedsecproject/worklog"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Dedsecproject/worklog/releases/download/v0.1.1/worklog_0.1.1_darwin_amd64.tar.gz"
-      sha256 "4c885845c41d0d1aa62e6e1215365d7d1d0cf2e73e17aa4339e4e241e8142ac8"
+      url "https://github.com/Dedsecproject/worklog/releases/download/v0.2.0/worklog_0.2.0_darwin_amd64.tar.gz"
+      sha256 "d492b1b4ed8eb667823c4aadf3c6e4740f1a28eb5e6e7e0e015d2e0d902127ed"
 
       define_method(:install) do
         bin.install "worklog"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Dedsecproject/worklog/releases/download/v0.1.1/worklog_0.1.1_darwin_arm64.tar.gz"
-      sha256 "bb3f8d4069b2a299104e828a29d4d7ede04f90d89f299b8f53fe6af18b58cdab"
+      url "https://github.com/Dedsecproject/worklog/releases/download/v0.2.0/worklog_0.2.0_darwin_arm64.tar.gz"
+      sha256 "e8f6ec1b00f98f7280d6b811e576b2cef3047cbcc99861aac944455074d1d035"
 
       define_method(:install) do
         bin.install "worklog"
@@ -29,15 +29,15 @@ class Worklog < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dedsecproject/worklog/releases/download/v0.1.1/worklog_0.1.1_linux_amd64.tar.gz"
-      sha256 "c20c0fa37199b248348f644565f0e5f465c021ea01a3bce83adde5299e906ac1"
+      url "https://github.com/Dedsecproject/worklog/releases/download/v0.2.0/worklog_0.2.0_linux_amd64.tar.gz"
+      sha256 "fdaa05c9f67e3f2bb5c24904c299c59750fec33d30bbf82b0e31b76c84d09217"
       define_method(:install) do
         bin.install "worklog"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dedsecproject/worklog/releases/download/v0.1.1/worklog_0.1.1_linux_arm64.tar.gz"
-      sha256 "adc3f0db9cb6004f0debe979430213a5e8086439cb761f3c40d37014d07f85d9"
+      url "https://github.com/Dedsecproject/worklog/releases/download/v0.2.0/worklog_0.2.0_linux_arm64.tar.gz"
+      sha256 "792d7abf06823d06fc603bbcfc46335c46049fccd6a542a593e5e12864b1dcfe"
       define_method(:install) do
         bin.install "worklog"
       end
