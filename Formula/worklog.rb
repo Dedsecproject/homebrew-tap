@@ -5,41 +5,45 @@
 class Worklog < Formula
   desc "Instant terminal logger for tasks and thoughts with Obsidian compatibility"
   homepage "https://github.com/Dedsecproject/worklog"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Dedsecproject/worklog/releases/download/v0.2.1/worklog_0.2.1_darwin_amd64.tar.gz"
-      sha256 "b99d261a10a71a60193c12d23447cfa5ccd6c128199c5b1eeff43aac7c0209be"
+      url "https://github.com/Dedsecproject/worklog/releases/download/v0.3.0/worklog_0.3.0_darwin_amd64.tar.gz"
+      sha256 "896cb615b3fad46e1c0c37ccfe71c59d075ad21b85328121b38f1bc957b17527"
 
       define_method(:install) do
         bin.install "worklog"
+        generate_completions_from_executable(bin/"worklog", "completion")
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Dedsecproject/worklog/releases/download/v0.2.1/worklog_0.2.1_darwin_arm64.tar.gz"
-      sha256 "d30c78fdfde1a60df7f90f60393ae1464a29fa383388403b6a4203143e0fbff0"
+      url "https://github.com/Dedsecproject/worklog/releases/download/v0.3.0/worklog_0.3.0_darwin_arm64.tar.gz"
+      sha256 "a7f8b82ab669b94fc54021a191f63f74ff4da1b329415ad42ed054b200a72c99"
 
       define_method(:install) do
         bin.install "worklog"
+        generate_completions_from_executable(bin/"worklog", "completion")
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dedsecproject/worklog/releases/download/v0.2.1/worklog_0.2.1_linux_amd64.tar.gz"
-      sha256 "e3d122fff3d4d41e34588b36291f9b19f6ca907d900222ab26f84e48fc0b6837"
+      url "https://github.com/Dedsecproject/worklog/releases/download/v0.3.0/worklog_0.3.0_linux_amd64.tar.gz"
+      sha256 "4b10cc5aa2823692c50ff544fb8091a4590704d57e3cdf1f8afde87ba257329f"
       define_method(:install) do
         bin.install "worklog"
+        generate_completions_from_executable(bin/"worklog", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Dedsecproject/worklog/releases/download/v0.2.1/worklog_0.2.1_linux_arm64.tar.gz"
-      sha256 "c29efef1275e20ce8db823028ef963e214080da7b4dbb3eb6976f0aabc1ea7a0"
+      url "https://github.com/Dedsecproject/worklog/releases/download/v0.3.0/worklog_0.3.0_linux_arm64.tar.gz"
+      sha256 "0908a4688d06e90644ffe8298c3a8aa9c1cb7b44207466bc6b1b8eda7ac060e2"
       define_method(:install) do
         bin.install "worklog"
+        generate_completions_from_executable(bin/"worklog", "completion")
       end
     end
   end
